@@ -1,15 +1,23 @@
 package com.example;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import javax.xml.crypto.Data;
 
 public class Studenti {
     private String nome;
     private String cognome;
-    private String dataNascita;
+    private Data dataNascita;
 
     public Studenti(){
         this.nome = "Rida";
         this.cognome = "Carola";
-        this.dataNascita = "02/04/2005";
+        try {
+            this.dataNascita = (Data) new SimpleDateFormat("dd/MM/yyyy").parse("02/04/2005");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     
@@ -21,7 +29,7 @@ public class Studenti {
     public String getCognome(){
         return this.cognome;
     }
-    public String getDataNascita(){
+    public Data getDataNascita(){
         return this.dataNascita;
     }
 
@@ -39,7 +47,7 @@ public class Studenti {
 
 
 
-    public void setDataNascita(String dataNascita) {
+    public void setDataNascita(Data dataNascita) {
         this.dataNascita = dataNascita;
     }
 

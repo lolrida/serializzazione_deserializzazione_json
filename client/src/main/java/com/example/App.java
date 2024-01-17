@@ -16,9 +16,8 @@ public class App {
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             ObjectMapper objectMapper = new ObjectMapper();
             String s = in.readLine();
-            System.out.println(s);
             Classe c = objectMapper.readValue(s, Classe.class);
-            
+            System.out.println(c);
             
 
         } catch (Exception e) {

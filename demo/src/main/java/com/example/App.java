@@ -68,7 +68,7 @@ public class App {
             
             Studenti studente = new Studenti();
             studenti.add(studente);
-            Classe classe = new Classe("5B", "Informatica", studenti);
+            Classe classe = new Classe("5", "CIA", "04-TW", studenti);
 
             ObjectMapper objectMapper = new ObjectMapper();
             String s = objectMapper.writeValueAsString(classe);

@@ -5,15 +5,16 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class Classe {
-    String classe;
-    String indirizzo;
+    String numero;
+    String sezione;
+    String aula;
+    ArrayList<Studenti> alunni;
 
-    ArrayList<Studenti> studenti;
-
-    public Classe(String classe, String indirizzo, ArrayList<Studenti> studenti) {
-        this.classe = classe;
-        this.indirizzo = indirizzo;
-        this.studenti = studenti;
+    public Classe(String numero, String sezione, String aula, ArrayList<Studenti> alunni) {
+        this.numero = numero;
+        this.sezione = sezione;
+        this.aula = aula;
+        this.alunni = alunni;
     }
 
     public Classe(){
@@ -21,45 +22,56 @@ public class Classe {
     }
 
     public void addStudente(Studenti studente) {
-        studenti.add(studente);
+        alunni.add(studente);
     }
 
-    public ArrayList<Studenti> getListaStudenti() {
-        return studenti;
+    public ArrayList<Studenti> getListaalunni() {
+        return alunni;
     }
 
     @Override
     public String toString(){
         String s;
-        s = "Classe: " + classe + "| Indirizzo: " + indirizzo + "| Studenti: " + studenti.toString();
+        s = "Classe: " + numero + "| Sezione: " + sezione + "| Aula: " + aula + "| Alunni: " + alunni.toString();
         return s;
     }
 
-    public String getClasse() {
-        return classe;
+     
+    public String getNumero() {
+        return numero;
     }
 
-    public void setClasse(String classe) {
-        this.classe = classe;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
-    public String getIndirizzo() {
-        return indirizzo;
+    public String getSezione() {
+        return sezione;
     }
 
-    public void setIndirizzo(String indirizzo) {
-        this.indirizzo = indirizzo;
+    public void setSezione(String sezione) {
+        this.sezione = sezione;
     }
 
-    public ArrayList<Studenti> getStudenti() {
-        return studenti;
+    public String getAula() {
+        return aula;
     }
 
-    public void setStudenti(ArrayList<Studenti> studenti) {
-        this.studenti = studenti;
+    public void setAula(String aula) {
+        this.aula = aula;
+    }
+
+    public ArrayList<Studenti> getAlunni() {
+        return alunni;
+    }
+
+    public void setAlunni(ArrayList<Studenti> alunni) {
+        this.alunni = alunni;
     }
 
     
+
+
 
 
    
