@@ -20,7 +20,7 @@ public class App {
             ServerSocket server = new ServerSocket(3000);
 
             Socket socket = server.accept();
-            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            BufferedReader in  = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
             ArrayList<Studenti> studenti = new ArrayList<Studenti>();

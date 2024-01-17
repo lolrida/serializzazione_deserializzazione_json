@@ -1,19 +1,16 @@
-
 {
-    alunni:
-    [
+    "alunni": [
         {
-            id: 1,
-            nome: "Marco",
-            cognome: "Rossi",
-            dataNascita: "1990-01-01"
+            "id": 1,
+            "nome": "Marco",
+            "cognome": "Rossi",
+            "dataNascita": "1990-01-01"
         },
         {
-            id: 1,
-            nome: "Marco",
-            cognome: "Rossi",
-            dataNascita: "1990-01-01"
+            "id": 1,
+            "nome": "Marco",
+            "cognome": "Rossi",
+            "dataNascita": "1990-01-01"
         }
     ]
-    
 }
