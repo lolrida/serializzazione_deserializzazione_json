@@ -1,0 +1,17 @@
+//struttura xml
+<Alunni>
+    <Alunno>
+        <id>1</id>
+        <nome>Marco</nome>
+        <cognome>Rossi</cognome>
+        <dataNascita>1990-01-01</dataNascita>
+    </Alunno>
+    <Alunno>
+        <id>1</id>
+        <nome>Marco</nome>
+        <cognome>Rossi</cognome>
+        <dataNascita>1990-01-01</dataNascita>
+    </Alunno>
+</Alunni>
+
+
