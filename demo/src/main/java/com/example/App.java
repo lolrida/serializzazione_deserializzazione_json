@@ -9,6 +9,8 @@ import java.net.Socket;
 import java.nio.Buffer;
 import java.util.ArrayList;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 /**
  * Hello world!
  *
@@ -46,13 +48,13 @@ public class App {
              * 
              * Serializzare (va fatto nel server): 
              *  - prendere un oggetto e trasformarlo in una stringa : 
-             *      objectMapper objectMapper = new objectMapper();
-             *      String s = objectMapper.writeValueAsString(studente);
+             *      ObjectMapper ObjectMapper = new ObjectMapper();
+             *      String s = ObjectMapper.writeValueAsString(studente);
              *      System.out.println(s);
              * 
              * Deserializzare (va fatto nel client): 
              *  - prendere una stringa e trasformarla in un oggetto :
-             *      Alunno a = objectMapper.readValue(s, Alunno.class);
+             *      Alunno a = ObjectMapper.readValue(s, Alunno.class);
              *      System.out.println(a.nome);
              *      System.out.println(a.cognome);
              * 
@@ -68,7 +70,10 @@ public class App {
             studenti.add(studente);
             Classe classe = new Classe("5B", "Informatica", studenti);
 
-            out.writeBytes(classe.toString() + "\n");
+            ObjectMapper objectMapper = new ObjectMapper();
+            String s = objectMapper.writeValueAsString(classe);
+
+            out.writeBytes(s + "\n");
 
             
 
